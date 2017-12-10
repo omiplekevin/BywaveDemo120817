@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.omiplekevin.bywavedemo120817.SplashActivity"
+    android:background="@drawable/gradient_splash_blue">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:paddingLeft="120dp"
+        android:paddingRight="120dp"
+        android:src="@drawable/splash"
+        android:id="@+id/imageView" />
+
+</FrameLayout>

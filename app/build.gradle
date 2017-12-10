@@ -1,15 +1,24 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.0"
     defaultConfig {
+        def OPENWEATHER_API_KEY = "OWAPIKEY"
+        def OPENWEATHER_API_BASE = "OWAPIBASE"
+
         applicationId "com.android.omiplekevin.bywavedemo120817"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", OPENWEATHER_API_KEY, "\"829c7db73c3b8c17ef5b1bb371ece129\"")
+        buildConfigField("String", OPENWEATHER_API_BASE, "\"http://api.openweathermap.org/\"")
     }
     buildTypes {
         release {
@@ -23,6 +32,11 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha3'
+
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.github.ralphpina:Android-Permissions-Manager:v2.0.1'
+
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
